@@ -1,0 +1,635 @@
+.font-kraft{
+    font-family: KraftRegular;
+}
+.text-color-black{
+    color: #4D4D4D
+}
+.text-color-orange{
+    color: #EFAE3D
+}
+html{
+    overflow-y: scroll;
+    cursor: default;
+}
+body{
+    color: #95989A;
+}
+video, img{
+    width: 100%;
+}
+header{
+    padding: 0.5rem 0;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #4D4D4D;
+}
+h1,h2{
+    margin-bottom: 1rem;
+}
+section{
+    margin-bottom: 10vh;
+}
+div.just p{
+    text-align: justify;
+}
+a{
+    -webkit-transition: all 150ms ease-in;
+    -moz-transition: all 150ms ease-in;
+    -ms-transition: all 150ms ease-in;
+    -o-transition: all 150ms ease-in;
+    transition: all 150ms ease-in;
+}
+a:hover{
+    text-decoration: none;
+}
+header ul{
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-right: 23px;
+}
+header .col-12{
+    margin-top: 8px;
+}
+header .logo-xs{
+    max-width: 39vw;
+}
+header .header {
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    height: 100px;
+    top: 0px;
+    padding: 15px;
+}
+footer>.container{
+    padding: 1.5rem 2.5rem;
+}
+footer image{
+    width: 100%;
+}
+footer .logo_itt{
+    width: 78%;
+}
+footer .logo_tv{
+    width: 170px;    
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms;
+}
+footer .logo_tv:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+footer .text_logo{
+    font-family: KraftRegular;
+    font-size: 1.9rem;
+}
+footer a{
+    color: #95989A;
+}
+footer a:hover{
+    color: #4D4D4D;
+}
+footer .cont{
+    font-size: 1.4rem;
+}
+footer .social_button{
+    font-size: 1.4rem;
+}
+main{
+    padding-top: 10vh;
+}
+aside.service-nav a{
+    color: #95989A;
+    text-align: center;
+}
+aside.service-nav img{
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms;
+}
+aside.service-nav a:hover{
+    color: #4D4D4D;
+}
+
+aside.service-nav img:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1rem;
+}
+.navbar-collapse{
+    text-align: right;
+}
+section.service a{
+    color: #95989A;
+}
+section.service a:hover{
+    color: #4D4D4D;
+}
+section.service img.tarif{
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms;
+}
+section.service img.tarif:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.card-header{
+    border-bottom: none;
+}
+.card-header a{
+    color: #4D4D4D;
+}
+.card {
+    border-radius: 0;
+}
+.card-block p{
+    padding: 0 1rem;
+}
+.progress{
+    border-radius: 0;
+    height: 2rem;
+}
+.services-home a{
+    color: #95989A;
+}
+.services-home a>img{
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms;
+}
+.services-home a>img:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.service-it-outsorsing-us a>img{
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms;
+}
+.service-it-outsorsing-us a>img:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.carousel-item>p{
+    padding: 0 5rem 0rem 5rem;
+    text-align: center;
+}
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F6A216' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F6A216' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-indicators{
+    cursor: pointer;
+    bottom: -15px;
+}
+.carousel-indicators>.active{
+    background-color: rgb(255, 201, 109);
+}
+.carousel-indicators>li{
+    background-color: rgb(206, 206, 206);
+}
+.thumbnail{
+    max-width: 200px;
+    cursor: pointer;
+}
+section.service-contact mut{
+    color: #95989A
+}
+section.service-contact .contact{
+    color: #4D4D4D;
+}
+section.prices-outsors .tarif-head {
+    background-color: #F2F2F2;
+    padding: 1rem 0;
+}
+section.prices-outsors .tarif-head-blue {
+    background-color: #31ACF2;
+    color: white;
+    padding: 1rem 0;
+}
+section.prices-outsors .tarif {
+    border: 1px solid #F2F2F2;
+}
+section.prices-outsors .tarif-blue {
+    border: 1px solid #31ACF2;
+}
+section.prices-outsors .tarif-head>span.price{
+    color: #4D4D4D;
+    font-size: 2rem;
+    font-weight: 700;
+}
+section.prices-outsors .tarif-head-blue>span.price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+section.prices-block-two img{
+    width: 75%
+}
+section.prices-block-two span{
+    color: #EFAE3D;
+}
+section.web-des span.prices-h{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4D4D4D;
+}
+section.web-des span.prices{
+    color: #EFAE3D;
+    font-size: 1.2rem;
+}
+section.web-des a{
+    font-size: 1.2rem;
+}
+section.service-1c-ser .spec{
+    padding: 2rem 1rem;
+    background-color: #fedc05;
+    color: rgba(0, 0, 0, 0.5);
+}
+section.service-1c-ser h6{
+    color: rgba(0, 0, 0, 0.75);
+}
+section.service-block-two img{
+    width: 65%;
+}
+section.service-block-two p{
+    padding-right: 1rem;
+    text-align: justify
+}
+section.service-web-us .spec{
+    padding: 2rem 1rem;
+    background-color: #31ACF2;
+    color: rgba(255, 255, 255, 0.75);
+}
+section.service-web-us h6{
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600
+}
+span.service-it-outsorsing-number{
+    font-size: 4rem;
+    color: #31ACF2
+}
+section.service-audit-it .spec{
+    padding: 2rem 1rem;
+    background-color: #F2F2F2;
+}
+section.service-install-sks .spec{
+    padding: 2rem 1rem;
+    background-color: #F2F2F2;
+}
+.spec{
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.25);
+}
+.navbar-nav-newsblog{
+    margin: 0;
+    padding: 4px;
+}
+.nav-item-newsblog{
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Калькулятор */
+
+
+/*html{
+  white-space: nowrap;
+}*/
+
+.culc {
+    /*text-align: center;*/
+    margin: 20px 5px;
+    font-size: 17px;
+    line-height: 150%;
+}
+
+.culc img
+{
+    width: 40px;
+    text-align: center;
+}
+
+.culc_cena {
+    float: right;
+    width: 256px;
+    margin: 0 1% 0 0;
+    background: url(images/left_side_gradient.png);
+    border: 1px solid #d2d2d2;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -icab-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    behavior: url('pie.htc');
+    box-shadow: 0 1px 3px #d2d2d2;
+    position: relative;
+    right: 7%;
+    width: 300px;
+    top: 50px;
+    padding: 1% 1%;
+    line-height: 190%;
+    font-size: 17px;
+    text-align: center;
+ 
+}
+
+.culc_cena input {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 24px;
+    width: 90%;
+    font-size: 15px;
+    font-family: Tahoma;
+    text-align: center;
+    position: relative;
+    left: -10px;
+}
+
+.result, .result1, .result2 {
+    font-size: 25px;
+    color: #0F802C;
+}
+
+.result3 {
+    font-size: 25px;
+    color: #F4A310;
+}
+
+.culc_knopka {
+    background: url(/calcul/img/calc_cena_gradient.png);
+    border: 0px solid #d2d2d2;
+    border-radius: 3px;
+    -o-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -icab-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    box-shadow: 0 2px 4px grey;
+    line-height: 150%;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.culc_knopka2_3 {
+    background: url(/calcul/img/calc_cena_gradient3.png);
+    border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -icab-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    box-shadow: 0 1px 3px grey;
+    line-height: 130%;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    width: 125px;
+    font-weight: bold;
+    color: rgba(89, 89, 89, 1);
+    cursor: pointer;
+}
+
+    .displayNoAdapt {
+        display: none;
+    }
+@media screen and (max-width: 1600px) {
+    .culc_cena {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .culc_cena {
+        width: 150px;
+        right: 0;
+    }
+    .culc_cena input {
+        left: 0;
+        width: 98%;
+    }
+    .culc_knopka2_3 {
+        width: 123px;
+        padding: 10px;
+    }
+    td.culc_knopka {
+        width: 120px;
+    }
+    .displayAdapt {
+        display: none;
+    }
+    .culc_cena table {
+        text-align: center;
+    }
+    .displayNoAdapt {
+        display: block;
+    }
+}
+
+.step2_m {}
+
+.step3_m {}
+
+.step4_m {}
+
+.step1_name {}
+
+.step_input {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 24px;
+    width: 50px;
+    color: rgba(41, 153, 0, 1);
+    font-size: 17px;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+
+
+.step2 {}
+
+.step3 {}
+
+
+}
+.table_sum {
+    float: left;
+}
+.mush {
+    margin-top: 0;
+    color: #FFFFFF;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 15pt;
+    height: 31px;
+    background: url(http://ittarget.ru/calcul/img/accardion-h3-bg.png) repeat-x top #64b646;
+    float: left;
+    width: 98%;
+    padding-left: 2%;
+    margin-top: 0px;
+    font-weight: bold;
+    line-height: 140%;
+    margin-bottom: 15px;
+}
+.oformit {}
+.sendform {}
+.linia {}
+.bd_day {}
+.calc_block1, .calc_block3 {
+    margin: 0 5% 25px 5%;
+}
+
+.calc_block2 {
+    margin: 0 5% 25px 4%;
+}
+
+.calc_block1 img
+{
+    width: 40px;
+    text-align: center;
+}
+
+.calc_block2 table
+{
+    width: 100%;
+    text-align: center;
+}
+
+.calc_atc_ico
+{
+    background: url(http://ittarget.ru/calcul/img/atc/lv1001.png) no-repeat;
+    background-position-y: 40%;
+    width: 212.5px;
+}
+ 
+.calc_atc_ico > img {
+    width: 25px;
+    position: relative;
+}
+
+
+
+
+.real-hint { 
+background-color: #fff; 
+border: 1px solid #aaa; 
+border-radius: 10px; 
+display: none; 
+padding: 5px 10px; 
+position: absolute; 
+width: 250px; 
+z-index: 99; 
+} 
+
+.real-hint .hint-caption { 
+font-weight: bold; 
+text-transform: uppercase; 
+} 
+
+.real-hint .prm-cross { 
+cursor: pointer; 
+float: right; 
+height: 16px; 
+margin-top: 3px; 
+padding-left: 15px; 
+right: 10px; 
+width: 16px; 
+} 
+
+.real-show-hint { 
+cursor: pointer; 
+border-bottom: dashed 1px; 
+color: #8c0000; 
+}
+
+
+/* Калькулятор КОНЕЦ */

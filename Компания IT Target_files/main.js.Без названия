@@ -1,0 +1,1 @@
+$(function(){$(".thumbnail").click(function(a){a.preventDefault(),$("#image-modal .modal-body img").attr("src",$(this).attr("src")),$("#image-modal").modal("show")}),$("#image-modal .modal-body img").on("click",function(){$("#image-modal").modal("hide")})});

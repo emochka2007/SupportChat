@@ -1,0 +1,507 @@
+var priceOnePC = 850;
+var priceoneSV = 2400;
+var priceonePR=150;
+var valquanSV = 0;
+var chek1 = 0;
+var pesentforServ = 7;
+var pesentFour = 45 / 100;
+var pesentTwo = 20 / 100;
+var pesentTen=10/100;
+var pesentFive=50/100;
+var pesentSeven=7/100;
+var pesentTwelf=12/100;
+var perforshow = [];
+var summaQuanAll = 0;
+var summaQuanSale=0;
+var valquanAnATC = 700;
+var valquanIpATC = 1500;
+var quanPC = 0;
+var quanSV=0;
+var summaQuanM = 0;
+var summaQuanch1 = 0;
+var summaQuanch2 = 0;
+var summaQuanch3 = 0;
+var RealHint=0;
+var perforsumcheck3=0;
+var zpShtatsotr=35000;
+var testnut=0;
+
+
+$("#supUs").prop('checked', 'checked');
+for (var i = 0; i < 4; i++) {
+    perforshow[i] = 0;
+}
+
+var perforsum = [];
+for (var i = 0; i < 4; i++) {
+    perforsum[i] = 0;
+}
+
+var perforsumchek = [];
+for (var i = 0; i < 12; i++) {
+    perforsumchek[i] = 0;
+}
+var perforsumch = [];
+for (var i = 0; i < 3; i++) {
+    perforsumch[i] = 0;
+}
+
+var perforsumSlid=[];
+for (var i=0;i<6;i++){
+    perforsumSlid[i]=0;
+}
+
+var summaQuanch3=[];
+for (var i=0;i<3;i++){
+    summaQuanch3[i]=0;
+}
+
+//РїРѕРґСЃРєР°Р·РєР°
+
+function changeValue(element,data,sliderValue,event){
+switch (data){
+    case 0:
+        perforsum[0] = $('#data1').val();
+            quanPC = parseInt($('#data1').val());
+           if (perforsum[0] == "") {
+                perforsum[0] = 0;
+                        chekRadio();
+            } else {
+                if (perforsum[0] >= 0 && perforsum[0] <= 30) {
+                        perforsum[0] = parseInt($('#data1').val());
+                            perforsum[0] *= priceOnePC;           
+                                chekRadio();
+                } else if (perforsum[0] > 30 && perforsum[0] <= 40) {
+                         perforsum[0] = parseInt($('#data1').val());
+                            perforsum[0] = ((priceOnePC * perforsum[0]) - (priceOnePC * perforsum[0] * 0, 15));      
+                                 chekRadio();
+                } else if (perforsum[0] > 40 && perforsum[0] <= 50) {
+                        perforsum[0] = parseInt($('#data1').val());
+                            perforsum[0] = ((priceOnePC * perforsum[0]) - (priceOnePC * perforsum[0] * 0, 17));     
+                                 chekRadio();
+                } else if (perforsum[0] > 50 && perforsum[0] <= 80) {
+                         perforsum[0] = parseInt($('#data1').val());
+                            perforsum[0] = ((priceOnePC * perforsum[0]) - (priceOnePC * perforsum[0] * 0, 2));     
+                                 chekRadio();
+                } else if (perforsum[0] > 80 && perforsum[0] <= 100) {
+                         perforsum[0] = parseInt($('#data1').val());
+                             perforsum[0] = ((priceOnePC * perforsum[0]) - (priceOnePC * perforsum[0] * 0, 25));      
+                                chekRadio();
+                } else if (perforsum[0] > 100 && perforsum[0] <= 250) {
+                         perforsum[0] = parseInt($('#data1').val());
+                             perforsum[0] = ((priceOnePC * perforsum[0]) - (priceOnePC * perforsum[0] * 0, 3));   
+                                 chekRadio();
+                } else if (perforsum[0] > 250) {
+                         perforsum[0] = 250;
+                         perforsum[0] = ((priceOnePC * perforsum[0]) - (priceOnePC * perforsum[0] * 0, 3));
+                         
+                         chekRadio();
+                                var ypos = $(element).offset().top; 
+                                var xpos = $(element).offset().left; 
+                                        RealHint = $(element).data('hint'); 
+                                                $(RealHint).css('top','150px'); 
+                                                    $(RealHint).css('left','530px'); 
+                                                        $(RealHint).toggle('slow'); 
+                                                             $('#data1').val(250);
+                                                             
+                }
+            }
+    break;
+    case 1:
+        perforsum[2] = $('#data2').val();
+        if (perforsum[2] == "") {
+                perforsum[2] = 0;
+                
+                    chekRadio();;
+        } else {
+                perforsum[2] = parseInt($('#data2').val());
+                    
+                        if(perforsum[2]<=10){
+                            perforsum[2]*=priceonePR;                
+                                chekRadio();
+                        }else if(perforsum[2]>10 && perforsum[2]<=20){
+                            var chek2=perforsum[2]*priceonePR;
+                                perforsum[2]=chek2-(chek2*pesentSeven);                
+                                chekRadio();
+                        }else if(perforsum[2]>20 && perforsum[2]<=40){
+                            var chek2=perforsum[2]*priceonePR;
+                                perforsum[2]=chek2-(chek2*pesentTwelf);                
+                                chekRadio();
+                        }else if(perforsum[2]>41){
+                            var chek2=perforsum[2]*priceonePR;
+                                perforsum[2]=chek2-(chek2*pesentTwo);                
+                                chekRadio();}
+            }
+    break;
+     case 2:
+        
+        perforsum[1] = $('#data3').val();
+        if (perforsum[1] == "") {
+            valquanSV=0;
+                perforsum[1] = 0; 
+                summaQuanch2=0;       
+                    chekRadio();
+        } else {
+                valquanSV = parseInt($('#data3').val());
+                    perforsum[1] = parseInt($('#data3').val());
+                        perforsum[1] *= priceoneSV;        
+                            chekRadio();}
+    break;
+     case 3:
+        perforsum[3] = $('#data4').val();
+        if (perforsum[3] == "") {
+                perforsum[3] = 0;    
+                    chekRadio();
+        } else {
+                perforsum[3] = parseInt($('#data4').val());
+                    
+                        perforsum[3]*=1800; 
+                    chekRadio();}
+    break;
+    
+}
+
+}
+
+
+
+//РїРѕРґСЃРєР°Р·РєР°
+//РѕРіСЂР°РЅРёС‡РёРІР°РµРј РІРІРѕРґ СЃРёРјРІРѕР»РѕРІ
+
+ $(".step_input").keydown(function(event) {
+        // Р Р°Р·СЂРµС€Р°РµРј: backspace, delete, tab Рё escape
+        if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || 
+             // Р Р°Р·СЂРµС€Р°РµРј: Ctrl+A
+            (event.keyCode == 65 && event.ctrlKey === true) || 
+             // Р Р°Р·СЂРµС€Р°РµРј: home, end, РІР»РµРІРѕ, РІРїСЂР°РІРѕ
+            (event.keyCode >= 35 && event.keyCode <= 39)) {
+                 // РќРёС‡РµРіРѕ РЅРµ РґРµР»Р°РµРј
+                 return;
+        }
+        else {
+            // РћР±РµР¶РґР°РµРјСЃСЏ, С‡С‚Рѕ СЌС‚Рѕ С†РёС„СЂР°, Рё РѕСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЃРѕР±С‹С‚РёРµ keypress
+            if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                event.preventDefault(); 
+            }   
+        }
+    });
+
+
+//Radiobutton222222222222222!!!!!!!!!!!!!!!!!!!!!
+var boxes2 = $("input:radio");
+$(".radioform2").on("change", function() {
+     var theArray2 = new Array();
+    for (var i = 0; i < boxes2.length; i++) {
+        var box = boxes2[i];
+        chekRadio($(box).val());
+        if ($(box).prop('checked')) {
+            // theArray2[theArray2.length] = $(box).val();
+            switch ($(box).val()) {
+                case 'budDay_1':
+                    summaQuanch3[0] = 0;
+                    chekRadio();
+                    break;
+                case 'budDay_2':
+                    summaQuanch3[0] = 1;
+                    chekRadio();
+                    break;
+                case 'allDay':
+                    summaQuanch3[0] = 2;
+                    
+                    chekRadio();
+                    break;}
+        }
+    }
+});
+
+
+
+function chekRadio(){
+    if (summaQuanch3[1]==0){
+        
+                summaQuanch1 = 0;
+        switch (summaQuanch3[0]){
+        case 0:
+            perforsumcheck3=0;
+            
+        break;
+        case 1:
+            summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            perforsumcheck3=parseInt((summaQuanM + summaQuanch1 + summaQuanch2) * pesentTwo);
+            
+        break;
+        case 2:
+            summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            perforsumcheck3 = parseInt((summaQuanM + summaQuanch1 + summaQuanch2) * pesentFour);
+            
+        break;
+    }
+    }else if(summaQuanch3[1]==1){
+        summaQuanch1 = valquanAnATC;
+          switch (summaQuanch3[0]){
+        case 0:
+            perforsumcheck3=0;
+            
+        break;
+        case 1:
+            summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            perforsumcheck3=parseInt((summaQuanM + summaQuanch1 + summaQuanch2) * pesentTwo);
+            
+        break;
+        case 2:
+            summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            perforsumcheck3 = parseInt((summaQuanM + summaQuanch1 + summaQuanch2) * pesentFour);
+            
+        break;
+    }
+    }else if(summaQuanch3[1]==2){
+        
+            if($('#data1').val()==""){
+                quanPC=0;
+                 var loop = quanPC * 50 + valquanIpATC;
+                    summaQuanch1 = loop;
+            
+            }else{
+                var loop = quanPC * 50 + valquanIpATC;
+                    summaQuanch1 = loop;
+            
+            }
+             switch (summaQuanch3[0]){
+        case 0:
+            perforsumcheck3=0;
+            
+        break;
+        case 1:
+            summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            perforsumcheck3=parseInt((summaQuanM + summaQuanch1 + summaQuanch2) * pesentTwo);
+            
+        break;
+        case 2:
+            summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            perforsumcheck3 = parseInt((summaQuanM + summaQuanch1 + summaQuanch2) * pesentFour);
+            
+        break;
+    }
+    };
+
+
+  var chek = 0;
+    for (var i = 0; i < 12; i++) {
+        chek = perforsumchek[i] + chek;
+    }
+
+
+    if (valquanSV == 1) {
+        if (chek > 2) {
+            chek1 = (perforsum[1] * pesentforServ / 100) * (chek - 2);
+                summaQuanch2 = chek1;
+           
+        } else if (chek <= 2) {
+                summaQuanch2 = 0;
+            }}
+    if (valquanSV == 2) {
+        if (chek > 4) {
+            chek1 = (perforsum[1] * pesentforServ / 100) * (chek - 4);
+                    summaQuanch2 = chek1;
+           
+        } else if (chek <= 4) {
+                summaQuanch2 = 0;
+            }}
+    if (valquanSV == 3) {
+        if (chek > 6) {
+            chek1 = (perforsum[1] * pesentforServ / 100) * (chek - 6);
+                summaQuanch2 = chek1;
+            
+        } else if (chek <= 6) {
+                summaQuanch2 = 0;
+            }}
+    if (valquanSV == 4) {
+        if (chek > 8) {
+            chek1 = (perforsum[1] * pesentforServ / 100) * (chek - 8);
+                summaQuanch2 = chek1;
+            
+            
+        } else if (chek <= 8) {
+                summaQuanch2 = 0;
+            }}
+    if (valquanSV == 5) {
+        if (chek>10){
+            chek1=(perforsum[1] * pesentforServ / 100) * (chek - 10);
+                summaQuanch2 = chek1;
+            
+        } else if (chek<=10) {
+                summaQuanch2 = 0;
+            }}
+ pesentFun();
+}
+
+
+
+
+
+
+
+$(".lyuboi").click(function(){
+    perforsumSlid[0]=0;
+    switch ($(this).attr('id')){
+        case '1004_a':   
+        summaQuanch3[1]=1;     
+            // console.log("СЃРµСЂС‹Р№ С‚РµР»РµС„РѕРЅ СЃ С‚рублейєРѕР№");
+            $('#1003_c').css('z-index','2');
+                $('#1004_a').css('z-index','2');
+                    $('#lv1004_ip').css('z-index','4');
+                        $('#1003_ip').css('z-index','2');
+                            $('#lv1003_a').css('z-index','4');  
+
+            $('#lv1002').animate({left: '0px'});
+        
+            
+            chekRadio();
+        break;
+        case 'lv1004_c':
+        // console.log("СЃРµСЂС‹Р№ С€Р°СЂРёРє СЃ Р±СѓР±Р»РёРєРѕРј");
+                $('#lv1004_ip').css('z-index','4');
+                    $('#1004_a').css('z-index','4');        
+                        $('#1003_ip').css('z-index','2');
+                            $('#lv1003_a').css('z-index','2');
+                                $('#lv1004_c').css('z-index','2');
+                                    $('#1003_c').css('z-index','4');
+            
+            $('#lv1002').animate({left: '+100px'});
+        
+            summaQuanch3[1]=0;
+            chekRadio();
+        break;
+        case 'lv1004_ip':  
+            // console.log("СЃРµСЂС‹Р№ С€Р°СЂРёРє СЃ С‚рублейєРѕР№");
+            $('#lv1003_a').css('z-index','2');
+                $('#lv1004_ip').css('z-index','2');
+                    $('#1004_a').css('z-index','2');
+                        $('#1003_c').css('z-index','2');
+                            $('#lv1002').css('z-index','4');
+                                $('#1003_ip').css('z-index','4');
+
+            $('#lv1002').animate({left: '+200px'});
+        
+            summaQuanch3[1]=2;
+            chekRadio();
+            
+        break;
+    }
+     });
+
+
+
+//РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РєР»РёРє РїРѕ С‡РµРєР±РѕРєСЃСѓ
+$(".step2_check").click(function() {
+    testnut=$(this).attr('id');//СЃС‚Р°РЅРѕРІРёС‚СЃСЏ СЂР°РІРЅРѕ РёРґ С‡РµРєСЃРѕР±РєСЃР°
+    summaCheck(testnut);
+});
+//РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РєР»РёРє РїРѕ С‡РµРєР±РѕРєСЃСѓ Рё РѕС‚РїСЂР°РІР»СЏРµРј Р·РЅР°С‡РµРЅРёРµ РєР»РёРєР° РІ С„СѓРЅРєС†РёСЋ changeValueРЎhek(testmat);
+
+//РІРєР»СЋС‡РµРЅРЅС‹Рј С‡РµРєР±РѕРєСЃР°Рј Р·Р°РґР°РµРј РїРµСЂРµРјРµРЅРЅСѓСЋ РІ РјР°СЃСЃРёРІРµ
+function summaCheck(testmat){
+switch (testmat) {
+        case '1':
+                if (perforsumchek[0] == 0) { perforsumchek[0] = 1; } else { perforsumchek[0] = 0; }
+            break;
+        case '2':
+                if (perforsumchek[1] == 0) { perforsumchek[1] = 1; } else { perforsumchek[1] = 0; }            
+            break;
+        case '3':
+                if (perforsumchek[2] == 0) { perforsumchek[2] = 1; } else { perforsumchek[2] = 0; }            
+            break;
+        case '4':
+                if (perforsumchek[3] == 0) { perforsumchek[3] = 1; } else { perforsumchek[3] = 0; }            
+            break;
+        case '5':
+                if (perforsumchek[4] == 0) { perforsumchek[4] = 1; } else { perforsumchek[4] = 0; }            
+            break;
+        case '6':
+                if (perforsumchek[5] == 0) { perforsumchek[5] = 1; } else { perforsumchek[5] = 0; }            
+            break;
+        case '7':
+                if (perforsumchek[6] == 0) { perforsumchek[6] = 1; } else { perforsumchek[6] = 0; }            
+            break;
+        case '8':
+                if (perforsumchek[7] == 0) { perforsumchek[7] = 1; } else { perforsumchek[7] = 0; }            
+            break;
+        case '9':
+                if (perforsumchek[8] == 0) { perforsumchek[8] = 1; } else { perforsumchek[8] = 0; }            
+            break;
+        case '10':
+                if (perforsumchek[9] == 0) { perforsumchek[9] = 1; } else { perforsumchek[9] = 0; }            
+            break;
+        case '11':
+                if (perforsumchek[10] == 0) { perforsumchek[10] = 1; } else { perforsumchek[10] = 0; }            
+            break;
+        case '12':
+                if (perforsumchek[11] == 0) { perforsumchek[11] = 1; } else { perforsumchek[11] = 0; }            
+            break;
+    }
+     
+    chekRadio();
+}
+//РІРєР»СЋС‡РµРЅРЅС‹Рј С‡РµРєР±РѕРєСЃР°Рј Р·Р°РґР°РµРј РїРµСЂРµРјРµРЅРЅСѓСЋ РІ РјР°СЃСЃРёРІРµ Рё РІС‹Р·С‹РІР°РµРј С„СѓРЅРєС†РёСЋ РїРѕРґСЃС‡РµС‚Р°
+
+
+
+//chekboooxxxxx222222222!!!!!!!!!!!!!!!!!!!!
+//
+$("#pp_culc1").on("click", function() {
+    $("#pp_culc1").prop('checked', 'checked');
+        $("#pp_culc2").prop('checked', false);
+    pesentFun();
+    
+});
+
+$("#pp_culc2").on("click", function() {
+    $("#pp_culc2").prop('checked', 'checked');
+        $("#pp_culc1").prop('checked', false);
+    pesentFun();
+   
+});
+
+
+function saveAspdf() {
+var pdf = new jsPDF('p','pt','a4');
+pdf.addHTML(document.body,function() {
+    pdf.save('web.pdf');
+});
+};
+
+
+
+
+function pesentFun() {
+    $('.result').text(summaQuanAll+" рублей");
+    if ($("#pp_culc1").is(":checked")) {
+        summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+            summaQuanAll = parseInt(summaQuanM + summaQuanch1 + summaQuanch2 + perforsumcheck3);
+                summaQuanSale=parseInt((summaQuanM + summaQuanch1 + summaQuanch2 + perforsumcheck3) - (perforsum[0] * 48 / 100));
+
+            if(quanPC>=1||valquanSV>=1){$('.result3').text(zpShtatsotr-summaQuanAll+" рублей");}
+            if(quanPC>20||valquanSV>2){$('.result3').text(zpShtatsotr+25000-summaQuanAll+" рублей");} 
+            if(quanPC>40||valquanSV>5){$('.result3').text(zpShtatsotr+50000-summaQuanAll+" рублей");} 
+            if(perforsum[0]=="" && perforsum[1]=="" ){$('.result3').text(" ");};
+
+
+
+
+                    $('.result').text(summaQuanAll+" рублей");
+                      $('.result1').text(summaQuanAll+" рублей")
+                        $('.result2').text(summaQuanSale+" рублей")
+                        $(RealHint).hide('slow');                
+        
+    } else if ($("#pp_culc2").is(":checked")) {
+        
+
+        summaQuanM = perforsum[0] + perforsum[1] + perforsum[2]+perforsum[3];
+             summaQuanAll = parseInt((summaQuanM + summaQuanch1 + summaQuanch2 + perforsumcheck3) - (perforsum[0] * 48 / 100));
+                 summaQuanSale=parseInt((summaQuanM + summaQuanch1 + summaQuanch2 + perforsumcheck3) - (perforsum[0] * 48 / 100));
+                     $('.result').text(summaQuanAll+" рублей");
+                        $('.result1').text(summaQuanM + summaQuanch1 + summaQuanch2 + perforsumcheck3+" рублей")
+                         $('.result2').text(summaQuanSale+" рублей")
+                         $(RealHint).hide('slow');
+    }};
+//chekboooxxxxx222222222!!!!!!!!!!!!!!!!!!!!

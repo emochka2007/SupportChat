@@ -1,0 +1,84 @@
+html {
+  font-family: "Courier New", Courier, monospace;
+}
+.btn-primary-new {
+  background-color: rgb(155, 92, 214) !important;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif !important;
+  border: none;
+  width: 90%;
+  margin-top: 10px;
+}
+.btn-primary-new:hover {
+  background-color: #6980d3;
+}
+
+#main-content {
+}
+
+#profile-image {
+  border: 1px solid rgb(152, 69, 229) !important;
+  border-radius: 8px;
+}
+#msg-date {
+  font-size: 10px !important;
+}
+#msg-content {
+  font-size: 20px !important;
+}
+.btn-flex {
+  margin-top: 2rem;
+  display: flex;
+}
+.task {
+  width: 33%;
+  margin: 20px 0;
+  background-color: rgb(162, 213, 230) !important;
+  color: rgb(0, 0, 0) !important;
+  border-radius: 8px;
+  border: 1px solid rgb(128, 0, 255);
+  text-align: center;
+}
+.task-container {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+#task-id {
+  font-size: 10px;
+  font-style: oblique;
+}
+.add-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.well {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #bbc6ee !important;
+  color: rgb(21, 0, 89) !important;
+}
+.join_chat {
+  background-color: rgb(155, 92, 214);
+}
+.navbar-default {
+  background-color: #6980d3;
+}
+.navbar a {
+  color: black !important;
+}
+.navbar a:hover {
+  color: rgb(71, 71, 71) !important;
+}
+.page-container {
+  width: 100%;
+  display: flex;
+}
+.data-card {
+  width: 33%;
+}
+
+.data-card.done {
+  background-color: rgb(63, 225, 138);
+  width: 33%;
+}
